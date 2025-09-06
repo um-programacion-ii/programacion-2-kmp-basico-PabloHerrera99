@@ -1,5 +1,7 @@
 package org.basic.project
 
+import org.basic.project.bottomBar.BottomBarScreen
+
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -106,6 +108,23 @@ class MainScreen: Screen {
             ) {
                 Text(
                     text = "Third Screen"
+                )
+            }
+
+            Spacer(
+                modifier = Modifier.height(30.dp)
+            )
+
+            Button(
+                onClick = {
+                    navigator.push(
+                        item = BottomBarScreen()
+                    )
+                }
+
+            ) {
+                Text(
+                    text = "ButtonBar"
                 )
             }
         }
